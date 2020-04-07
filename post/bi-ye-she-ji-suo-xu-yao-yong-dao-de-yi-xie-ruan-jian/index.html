@@ -1,54 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<style>
-    .tags-container {
-        min-height: 100vh;
-        background: white;
-    }
-
-    .tagintro {
-        padding-top: 2%;
-        padding-left: 5%;
-        font-size: 2em;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .tag {
-        display: inline;
-        float: left;
-        width: 15%;
-        margin-left: 2%;
-        margin-top: 5%;
-        margin-right: 2%;
-        border: solid;
-        border-radius: 7px;
-        padding: 5px;
-        color: #3cdc82;
-        font-size: 1.2em;
-    }
-
-    .tagsimg {
-        width: 100%;
-    }
-
-    @media screen and (max-width: 1300px) {
-        .tag {
-            width: 80%;
-        }
-    }
-</style>
-
 <head>
-    <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="谷歌地图：相比国内主要是具有精度比较高的卫星图，可以用于小路区分，画图就可以细节到房子啦
+百度网盘链接链接: https://pan.baidu.com/s/1_O-3rUyU3OQRZ7ZA1uw_5w 提取码: merd
+..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://wuxingshenghua.github.io/media/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/styles/rainbow.min.css">
+              
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.1/build/highlight.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://wuxingshenghua.github.io/media/css/bootstrap.min.css">
     <title>小母牛翻跟头</title>
 </head>
-
 
 <body>
     <!-- 响应式布局，针对PC端内容显示 -->
@@ -297,20 +263,120 @@
             alert("博主暂未设置QQ联系方式");
     }
 </script></div>
+                <div id="tab1" class="tab">
+                    <div class="bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="close"></div>
+                </div>
                 <div id="main" class="col-xs-12 col-sm-7">
-                    <div class="tags-container">
-                        <img class="tagsimg" src="\media\images\custom-tagimage.jpg" alt="">
-                        
+                    <link rel="stylesheet" href="https://wuxingshenghua.github.io/media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="/media/images/postdefault.png" class="postimage">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-04-07</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>毕业设计所需要用到的一些软件</h2>
+            </div>
+            <div class="text ">
+                <p>谷歌地图：相比国内主要是具有精度比较高的卫星图，可以用于小路区分，画图就可以细节到房子啦</p>
+<p>百度网盘链接链接: https://pan.baidu.com/s/1_O-3rUyU3OQRZ7ZA1uw_5w 提取码: merd</p>
+
+            </div>
+            
+            
+        </div>
+    </div>
+</body>
+<script>
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
+    });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
+</script>
+                    <div name="comment" style="background: white">
+                        <div class="commentcontainer">
+                            
+                            
+                            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8f147f508e23dfd46517',
+    clientSecret: '44e7bc5b898811046a2e4bf8e3da2744bfd2b39e',
+    repo: 'wuxingshenghua.github.io',
+    owner: 'wuxingshenghua',
+    admin: ['wuxingshenghua'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+                            
+                            
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-6 col-sm-2"></div>
+                <div class="toc-container">
+                    
+                </div>
             </div>
         </div>
         <div id="bg">
         </div>
         <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
     </div>
-
     <!-- 响应式布局，针对手机端内容显示 -->
     <div class="nav-small">
         <head>
@@ -382,22 +448,109 @@
   <!-- 引入BootStrap核心js文件 -->
   <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-        <div style="margin-top:50px"></div>
-        <div class="tags-container">
-            <img class="tagsimg" src="\media\images\custom-tagimage.jpg" alt="">
+        <div style="margin-top:30px"></div>
+        <link rel="stylesheet" href="https://wuxingshenghua.github.io/media/css/font-awesome.css">
+<style>
+
+</style>
+
+<body>
+    <div class="allcontent">
+        <div class="postshow">
+            
+            <div class="postdetailimg" style="width:100%;overflow: hidden;display: none">
+                <img src="/media/images/postdefault.png" class="postimage">
+            </div>
+            <div class="postinfo">
+                <div class="postdate"><i class="fa fa-calendar"></i>2020-04-07</div>
+                <div class="poststatus postdate"><i class="fa fa-clock-o"></i> 1 min read</div>
+                <div class="posttag">
+                    
+                </div>
+            </div>
+            
+            <div id="texttitle" style="text-align: center">
+                <h2>毕业设计所需要用到的一些软件</h2>
+            </div>
+            <div class="text ">
+                <p>谷歌地图：相比国内主要是具有精度比较高的卫星图，可以用于小路区分，画图就可以细节到房子啦</p>
+<p>百度网盘链接链接: https://pan.baidu.com/s/1_O-3rUyU3OQRZ7ZA1uw_5w 提取码: merd</p>
+
+            </div>
+            
             
         </div>
     </div>
 </body>
-
-</html>
-<script src="https://wuxingshenghua.github.io/media/js/index.js"></script>
 <script>
-    $(".tag").each(function () {
-        var rgb = '#' + Math.floor(Math.random() * 0xffffff).toString(16);;
-        $(this).css('color', rgb);
+    var t_img; // 定时器
+    var isLoad = true; // 控制变量
+    isImgLoad(function () {
+        // 加载完成
+        $('.postdetailimg').css("display", "block");
     });
+    // 判断图片加载的函数
+    function isImgLoad(callback) {
+        // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+        // 查找所有封面图，迭代处理
+        $('.postdetailimg').each(function () {
+            // 找到为0就将isLoad设为false，并退出each
+            if (this.height === 0) {
+                isLoad = false;
+                return false;
+            }
+        });
+        // 为true，没有发现为0的。加载完毕
+        if (isLoad) {
+            clearTimeout(t_img); // 清除定时器
+            // 回调函数
+            callback();
+            // 为false，因为找到了没有加载完成的图，将调用定时器递归
+        } else {
+            isLoad = true;
+            t_img = setTimeout(function () {
+                isImgLoad(callback); // 递归扫描
+            }, 500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+        }
+    }
 </script>
+        <div name="comment" style="background: white">
+            <div class="commentcontainer">
+                
+                
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '8f147f508e23dfd46517',
+    clientSecret: '44e7bc5b898811046a2e4bf8e3da2744bfd2b39e',
+    repo: 'wuxingshenghua.github.io',
+    owner: 'wuxingshenghua',
+    admin: ['wuxingshenghua'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+                
+                
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+<script src="https://wuxingshenghua.github.io/media/js/post.js"></script>
 
 <script src="https://l2dwidget.js.org//lib/L2Dwidget.min.js"></script>
 <script src="https://wuxingshenghua.github.io/media/js/live2d.js"></script>
